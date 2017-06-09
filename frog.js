@@ -7,10 +7,3 @@ function Frog(x, y, size) {
 }
 
 Frog.prototype = Object.create(Rectangle.prototype);
-
-Frog.prototype.show = function() {
-  rectMode(CORNERS);
-  color(255);
-  rect(this.left,  this.top,
-       this.right, this.bottom);
-}

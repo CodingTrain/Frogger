@@ -4,26 +4,29 @@
 
 // Implements a rectangle for testing collisions.
 function Rectangle(x, y, w, h) {
-  this.left = x;
-  this.top = y;
-  this.right = x + w;
-  this.bottom = y + h;
+  this.x = x;
+  this.y = y;
+  this.w = w;
+  this.h = h;
 }
 
 // Check intersection with any other Rectangle object.
 Rectangle.prototype.intersects = function(other) {
   return !(
-    this.right  < other.left   ||
-    this.left   > other.right  ||
-    this.bottom < other.top    ||
-    this.top    > other.bottom
+    this.x + this.w  <= other.x            ||
+    this.x           >= other.x + other.w  ||
+    this.y + this.h  <= other.y            ||
+    this.y           >= other.y + other.h
   );
 }
 
 // Moves this rectangle by the provided x and y distances.
 Rectangle.prototype.move = function(x, y) {
-  this.left += x;
-  this.right += x;
-  this.top += y;
-  this.bottom += y;
+  this.x += x;
+  this.y += y;
+}
+
+Rectangle.prototype.show = function() {
+  color(255);
+  rect(this.x, this.y, this.w, this.h);
 }
