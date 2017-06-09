@@ -27,6 +27,5 @@ Rectangle.prototype.move = function(x, y) {
 }
 
 Rectangle.prototype.show = function() {
-  color(255);
   rect(this.x, this.y, this.w, this.h);
 }
