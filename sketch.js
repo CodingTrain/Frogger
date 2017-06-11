@@ -26,7 +26,7 @@ function setup() {
     new Row(8 * grid_size, 2,    2, 2 * grid_size, 300,   0, false),
     new Row(9 * grid_size, 2,    0,         width,   0,   0, true),
   ];
-  createCanvas(500, rows.length * grid_size);
+  createCanvas(width, rows.length * grid_size);
   resetGame();
 }
 
