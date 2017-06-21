@@ -9,7 +9,7 @@ This repo is the p5.js version of the code from the Frogger coding challenge.
 4. [Part 4 - Refactoring](https://www.youtube.com/watch?v=c6WdJltqEtM)
 
 ## Play the game!
-https://codingtrain.github.io/Asteroids/
+https://codingtrain.github.io/Frogger/
 
 ## Contributing
 
